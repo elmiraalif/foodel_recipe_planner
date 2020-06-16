@@ -94,7 +94,7 @@ passport.use(
       //pass in these values from .env file
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/foodel",
+      callbackURL: "https://agile-atoll-78055.herokuapp.com/auth/google/foodel",
       userProfileIRL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {

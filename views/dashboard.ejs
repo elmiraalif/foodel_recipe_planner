@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<header class="clearfix">
+  <div class="py-3 px-5 float-left">
+    <img class="logo-dashboard img-fluid" src="images/logo.png" alt="dashboard logo" />
+  </div>
+  <div class="py-3 px-5 float-right">
+    <a href="/logout"><img class="logout-button" src="images/logout.png" alt="logout button" title="Log out" /></a>
+    <img class="logout-button" src="images/user.png" alt="logout button" />
+  </div>
+</header>
+
+<main id="main-dashboard">
+  <div class="container centered">
+    <div class="w-50 mx-auto my-0">
+      <h1 class="pb-3">Welcome Back to your Profile!</h1>
+      <p>Before getting your weekly meal plan, we need your BMI. to calculate your BMI, please click the button below</p>
+      <a class="btn btn-primary btn-lg mb-5" href="bmiCalculator">Calculate BMI</a>
+    </div>
+
+    <div class="logo-bottom pt-5">
+      <img class="logo-bottom pt-5" src="images/foodel.png" alt="decorative image of a large leaf" />
+      <img class="logo-bottom pt-5" src="images/foodel-1.png" alt="decorative image of a small leaf" />
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

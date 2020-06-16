@@ -1,0 +1,83 @@
+<%- include('partials/header') %>
+
+<header class="clearfix">
+  <div class="py-3 px-5 float-left">
+    <img class="logo-dashboard img-fluid" src="images/logo.png" alt="dashboard logo" />
+  </div>
+  <div class="py-3 px-5 float-right">
+    <a href="/logout"><img class="logout-button" src="images/logout.png" alt="logout button" title="Log out" /></a>
+    <img class="logout-button" src="images/user.png" alt="logout button" />
+  </div>
+</header>
+
+<main id="main-bmi">
+  <div class="container centered">
+    <h2 class="pb-5 heading-loggedin">Get you weekly Plan!</h2>
+    <div class="w-30 text-left mx-auto">
+      <form method="post" action="/bmiCalculator">
+        <div class="form-group">
+          <label for="weight">Your Weight</label>
+          <span>
+            <img class="icon-data float-right" src="images/fat.png" />
+            <img class="icon-data icon-left" src="images/thin.png" />
+          </span>
+          <input
+            type="range"
+            class="form-control-range slider my-2"
+            id="weight"
+            name="weight"
+            min="30"
+            max="200"
+            step="0.5"
+            onchange="updateWeight(this.value);"
+          />
+          <span><input type="text" class="rangeValue" id="inputWeight" value="" />(KG)</span>
+        </div>
+        <div class="form-group">
+          <label for="height">Your Height</label>
+          <span>
+            <img class="icon-data float-right" src="images/tall.png" />
+            <img class="icon-data icon-left" src="images/short.png" />
+          </span>
+          <input
+            type="range"
+            class="form-control-range slider my-2"
+            id="height"
+            name="height"
+            min="1"
+            max="2.5"
+            step="0.01"
+            onchange="updateHeight(this.value);"
+          />
+          <span><input type="text" class="rangeValue" id="inputHeight" value="" />(M)</span>
+        </div>
+        <div class="form-group">
+          <label for="gender">Your Gender</label>
+          <span>
+            <img class="icon-data float-right" src="images/male.png" />
+            <img class="icon-data icon-left" src="images/female.png" />
+          </span>
+          <input type="range" class="form-control-range slider my-2" id="gender" name="gender" min="1" max="2" onchange="updateGender(this.value);" />
+        </div>
+        <div class="text-center py-3">
+          <button class="btn btn-primary" type="submit" name="button">Calculate BMI</button>
+        </div>
+      </form>
+    </div>
+    <div class="logo-bottom">
+      <img class="logo-bottom" src="images/foodel.png" alt="decorative image of a large leaf" />
+      <img class="logo-bottom" src="images/foodel-1.png" alt="decorative image of a small leaf" />
+    </div>
+  </div>
+</main>
+
+<script type="text/javascript">
+  function updateWeight(val) {
+    document.getElementById("inputWeight").value = val;
+  }
+
+  function updateHeight(val) {
+    document.getElementById("inputHeight").value = val;
+  }
+</script>
+<%- include('partials/footer') %>

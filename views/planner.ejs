@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+
+<header class="clearfix">
+  <div class="py-3 px-5 float-left">
+    <img class="logo-dashboard img-fluid" src="images/logo.png" alt="dashboard logo" />
+  </div>
+  <div class="py-3 px-5 float-right">
+    <a href="/logout"><img class="logout-button" src="images/logout.png" alt="logout button" title="Log out" /></a>
+    <a href="/dashboard"><img class="logout-button" src="images/user.png" alt="profile" /></a>
+  </div>
+</header>
+
+<main id="main-planner">
+  <div class="container centered scroll">
+    <h2 class="pb-5 heading-loggedin">Enjoy Your Meal Plan!</h2>
+
+    <div class="row pb-5">
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlMonday %>" class="card-img-top" alt="monday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Monday</h5>
+            <hr />
+            <h4><a href="<%= monday %>"><%= titleMonday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesMonday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlTuesday %>" class="card-img-top" alt="tuesday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Tuesday</h5>
+            <hr />
+            <h4><a href="<%= tuesday %>"><%= titleTuesday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesTuesday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlWednesday %>" class="card-img-top" alt="wednesday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Wednesday</h5>
+            <hr />
+            <h4><a href="<%= wednesday %>"><%= titleWednesday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesWednesday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlThursday %>" class="card-img-top" alt="thursday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Thursday</h5>
+            <hr />
+            <h4><a href="<%= thursday %>"><%= titleThursday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesThursday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlFriday %>" class="card-img-top" alt="friday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Friday</h5>
+            <hr />
+            <h4><a href="<%= friday %>"><%= titleFriday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesFriday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlSaturday %>" class="card-img-top" alt="Saturday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Saturday</h5>
+            <hr />
+            <h4><a href="<%= saturday %>"><%= titleSaturday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesSaturday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card" style="width: 18rem;">
+          <img src="<%= imageUrlSunday %>" class="card-img-top" alt="Sunday meal" />
+          <div class="card-body">
+            <h5 class="card-title">Sunday</h5>
+            <hr />
+            <h4><a href="<%= sunday %>"><%= titleSunday %></h4></a>
+            <p class="card-text"><strong>Ready in:</strong><%= minutesSunday %> Minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
